@@ -8,9 +8,7 @@ export default function Footer() {
             <p className="text-[#3D52A0] font-medium">
               © 2024 Sujal Singh. All rights reserved.
             </p>
-            <p className="text-sm text-[#8697C4] mt-1">
-              Built with React, Tailwind CSS & shadcn/ui
-            </p>
+            
           </div>
 
           {/* Right side - Social Links */}
