@@ -19,7 +19,7 @@ export default function Hero() {
 
           {/* Tagline */}
           <h2 className="text-xl md:text-2xl font-medium text-[#8697C4] mb-6">
-            Software Developer 
+            Software Developer
           </h2>
 
           {/* Subtext */}
@@ -29,12 +29,13 @@ export default function Hero() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="bg-[#3D52A0] hover:bg-[#2A3A7A] text-white px-8 py-3 transition-all duration-300 hover:opacity-90"
+            <a
+              href="/resume_sujal.pdf"
+              download
+              className="bg-[#3D52A0] hover:bg-[#2A3A7A] text-white px-8 py-3 rounded transition-all duration-300 hover:opacity-90 text-lg font-medium flex items-center justify-center"
             >
               Download Resume
-            </Button>
+            </a>
             <Button
               variant="outline"
               size="lg"
