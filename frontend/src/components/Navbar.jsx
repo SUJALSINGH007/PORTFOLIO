@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { FiMenu } from "react-icons/fi";
 
 export default function Navbar() {
   // Theme toggle logic
@@ -100,8 +101,9 @@ export default function Navbar() {
             variant="outline"
             size="sm"
             className="lg:hidden border-[#3D52A0] text-[#3D52A0] hover:bg-[#3D52A0] hover:text-white"
+            aria-label="Open menu"
           >
-            Menu
+            <FiMenu className="text-xl" />
           </Button>
         </div>
       </div>
