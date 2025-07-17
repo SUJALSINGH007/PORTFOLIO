@@ -6,7 +6,7 @@ export default function Footer() {
           {/* Left side - Text */}
           <div className="text-center md:text-left mb-4 md:mb-0">
             <p className="text-[#3D52A0] font-medium">
-              © 2024 Sujal Singh. All rights reserved.
+              © 2025 Sujal Singh. All rights reserved.
             </p>
             
           </div>
