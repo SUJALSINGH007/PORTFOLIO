@@ -1,21 +1,20 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#EDE8F5] border-t border-[#ADBBD4] py-8">
+    <footer className="bg-[#EDE8F5] dark:bg-[#181B23] border-t border-[#ADBBD4] dark:border-[#3D52A0] py-8 transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left side - Text */}
           <div className="text-center md:text-left mb-4 md:mb-0">
-            <p className="text-[#3D52A0] font-medium">
+            <p className="text-[#3D52A0] dark:text-[#7091E6] font-medium">
               © 2025 Sujal Singh. All rights reserved.
             </p>
-            
           </div>
 
           {/* Right side - Social Links */}
           <div className="flex space-x-6">
             <a
               href="#"
-              className="text-[#3D52A0] hover:text-[#7091E6] transition-colors duration-300"
+              className="text-[#3D52A0] dark:text-[#7091E6] hover:text-[#7091E6] dark:hover:text-yellow-400 transition-colors duration-300"
               aria-label="GitHub"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -25,7 +24,7 @@ export default function Footer() {
 
             <a
               href="https://www.linkedin.com/in/sujal-singh-b55b78256/"
-              className="text-[#3D52A0] hover:text-[#7091E6] transition-colors duration-300"
+              className="text-[#3D52A0] dark:text-[#7091E6] hover:text-[#7091E6] dark:hover:text-yellow-400 transition-colors duration-300"
               aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
@@ -37,7 +36,7 @@ export default function Footer() {
 
             <a
               href="mailto:singhsujal52938@gmail.com"
-              className="text-[#3D52A0] hover:text-[#7091E6] transition-colors duration-300"
+              className="text-[#3D52A0] dark:text-[#7091E6] hover:text-[#7091E6] dark:hover:text-yellow-400 transition-colors duration-300"
               aria-label="Email"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

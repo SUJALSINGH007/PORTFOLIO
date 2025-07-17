@@ -34,18 +34,18 @@ const achievements = [
 
 export default function Education() {
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden transition-colors duration-300">
       <AnimatedCircles />
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#3D52A0] text-center mb-12">
+          <h2 className="text-4xl font-bold text-[#3D52A0] dark:text-[#7091E6] text-center mb-12">
             Education & Achievements
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Education */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-[#3D52A0] mb-4">Education</h3>
+              <h3 className="text-2xl font-semibold text-[#3D52A0] dark:text-[#7091E6] mb-4">Education</h3>
               {education.map((item, index) => (
                 <Card key={index} className="bg-[#EDE8F5] border-[#ADBBD4] shadow-lg">
                   <CardHeader>
@@ -63,7 +63,7 @@ export default function Education() {
 
             {/* Certifications */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-[#3D52A0] mb-4">Certifications</h3>
+              <h3 className="text-2xl font-semibold text-[#3D52A0] dark:text-[#7091E6] mb-4">Certifications</h3>
               {certifications.map((item, index) => (
                 <Card key={index} className="bg-[#EDE8F5] border-[#ADBBD4] shadow-lg">
                   <CardHeader>
@@ -81,7 +81,7 @@ export default function Education() {
 
             {/* Achievements */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-[#3D52A0] mb-4">Extracurricular Activities</h3>
+              <h3 className="text-2xl font-semibold text-[#3D52A0] dark:text-[#7091E6] mb-4">Extracurricular Activities</h3>
               {achievements.map((item, index) => (
                 <Card key={index} className="bg-[#EDE8F5] border-[#ADBBD4] shadow-lg">
                   <CardHeader>

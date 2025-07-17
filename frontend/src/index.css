@@ -30,20 +30,58 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+  .dark {
+    --background: 220 13% 10%;
+    --foreground: 0 0% 98%;
+    --card: 220 13% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 13% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 220 100% 80%;
+    --primary-foreground: 220 13% 10%;
+    --secondary: 220 70% 65%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 10% 30%;
+    --muted-foreground: 220 10% 70%;
+    --accent: 220 20% 25%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 10% 25%;
+    --input: 220 10% 25%;
+    --ring: 220 100% 80%;
+    --radius: 0.5rem;
+  }
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  body {
+  html, body {
     @apply bg-background text-foreground font-sans;
     font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* SVG background from https://21st.dev/kokonutd/background-paths/default */
+    background-image: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H1440V1024H0V0Z" fill="white"/><path d="M0 0H1440V1024H0V0Z" fill="url(%23paint0_linear_1_2)"/><defs><linearGradient id="paint0_linear_1_2" x1="720" y1="0" x2="720" y2="1024" gradientUnits="userSpaceOnUse"><stop stop-color="%23F3F4F6"/><stop offset="1" stop-color="%23E5E7EB"/></linearGradient></defs></svg>');
+  }
+  .dark html, .dark body {
+    background-image: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H1440V1024H0V0Z" fill="%23181B23"/><path d="M0 0H1440V1024H0V0Z" fill="url(%23paint0_linear_1_2)"/><defs><linearGradient id="paint0_linear_1_2" x1="720" y1="0" x2="720" y2="1024" gradientUnits="userSpaceOnUse"><stop stop-color="%23232A3A"/><stop offset="1" stop-color="%23181B23"/></linearGradient></defs></svg>');
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   }
+}
+
+/* Remove wave-bg utility for global SVG background consistency */
+.wave-bg, .wave-bg::before, .dark .wave-bg::before {
+  background: none !important;
+  background-image: none !important;
 }
 
 /* Color Cycling Background Animation - DISABLED */

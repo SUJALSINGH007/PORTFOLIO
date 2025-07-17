@@ -65,29 +65,29 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 bg-[#EDE8F5] relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden transition-colors duration-300">
       <AnimatedCircles />
       <div className="w-full relative z-10">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-[#3D52A0] text-center mb-12">
+          <h2 className="text-4xl font-bold text-[#3D52A0] dark:text-[#7091E6] text-center mb-12">
             Get In Touch
           </h2>
 
           <div className="flex justify-center">
             {/* Contact Information */}
             <div className="space-y-6 max-w-lg w-full">
-              <h3 className="text-2xl font-semibold text-[#3D52A0] mb-6 text-center">
+              <h3 className="text-2xl font-semibold text-[#3D52A0] dark:text-[#7091E6] mb-6 text-center">
                 Contact Information
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="bg-white border-[#ADBBD4] shadow-lg">
+                  <Card key={index} className="bg-white dark:bg-[#181B23] border-[#ADBBD4] dark:border-[#3D52A0] shadow-lg">
                     <CardContent className="p-4">
                       <div className="flex items-center space-x-3">
                         <span className="text-2xl">{info.icon}</span>
                         <div>
-                          <p className="font-semibold text-[#3D52A0]">{info.label}</p>
-                          <p className="text-gray-700">{info.value}</p>
+                          <p className="font-semibold text-[#3D52A0] dark:text-[#7091E6]">{info.label}</p>
+                          <p className="text-gray-700 dark:text-gray-300">{info.value}</p>
                         </div>
                       </div>
                     </CardContent>
