@@ -1,5 +1,6 @@
 import { SiJavascript, SiPython, SiHtml5, SiCss3, SiBootstrap, SiReact, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiGit, SiGithub, SiPostman } from "react-icons/si";
 import AnimatedCircles from "./AnimatedCircles";
+import RevealOnScroll from "./RevealOnScroll";
 
 const skills = [
   { name: "JavaScript", icon: SiJavascript },
@@ -23,16 +24,22 @@ export default function Skills() {
       <AnimatedCircles />
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#3D52A0] dark:text-white text-center mb-12">
-            Skills & Technologies
-          </h2>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
-            {skills.map(({ name, icon: Icon }, idx) => (
-              <div key={name} className="flex flex-col items-center group">
-                <Icon className="text-5xl md:text-6xl text-[#3D52A0] dark:text-[#7091E6] group-hover:text-[#7091E6] dark:group-hover:text-yellow-400 transition-colors duration-300" title={name} />
-              </div>
-            ))}
-          </div>
+          <RevealOnScroll delay={0}>
+            <h2 className="text-4xl font-bold text-[#3D52A0] dark:text-white text-center mb-12">
+              Skills & Technologies
+            </h2>
+          </RevealOnScroll>
+          <RevealOnScroll delay={100}>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
+              {skills.map(({ name, icon: Icon }, idx) => (
+                <RevealOnScroll key={name} delay={idx * 60}>
+                  <div className="flex flex-col items-center group">
+                    <Icon className="text-5xl md:text-6xl text-[#3D52A0] dark:text-[#7091E6] group-hover:text-[#7091E6] dark:group-hover:text-yellow-400 transition-colors duration-300" title={name} />
+                  </div>
+                </RevealOnScroll>
+              ))}
+            </div>
+          </RevealOnScroll>
         </div>
       </div>
     </section>
